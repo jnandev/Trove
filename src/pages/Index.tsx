@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import MenuSection from "@/components/MenuSection";
+import CategorySection from "@/components/CategorySection";
 import FeaturedSection from "@/components/FeaturedSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -11,50 +11,38 @@ import { Cake, Heart, Sparkles } from "lucide-react";
 
 const Index = () => {
   const dessertItems = [
-    { name: "Vanilla Cupcake", price: 50, isPopular: true, description: "Classic vanilla cupcake with creamy frosting" },
-    { name: "Chocolate Cupcake", price: 60, description: "Rich chocolate cupcake with ganache" },
-    { name: "Double Chocolate Muffin", price: 40, description: "Moist muffin loaded with chocolate chips" },
-    { name: "Red Velvet Cupcake", price: 60, description: "Velvety smooth with cream cheese frosting" },
-    { name: "Strawberry Cupcake", price: 60, description: "Fresh strawberry flavor with berry frosting" },
-    { name: "Mawa Cake", price: 600, isPopular: true, description: "Traditional Indian milk cake" },
-    { name: "Vanilla Cake", price: 500, description: "Light and fluffy vanilla sponge" },
-    { name: "Chocolate Truffle Cake", price: 800, description: "Decadent chocolate layers with truffle" },
-    { name: "Butterscotch Cake", price: 600, description: "Butterscotch flavored sponge cake" },
-    { name: "Rasmalai Cake", price: 800, description: "Fusion of rasmalai and cake" },
-    { name: "Black Forest Cake", price: 600, description: "Cherry and chocolate classic" },
-    { name: "Strawberry Cake", price: 700, description: "Fresh strawberry celebration cake" },
-    { name: "Irish Coffee Cake", price: 600, description: "Coffee-infused adult favorite" },
-    { name: "Choco Chip Cookies", price: 60, description: "Crispy cookies with chocolate chips" },
-    { name: "Double Chocolate Cookies", price: 70, description: "For the chocolate lovers" },
-    { name: "Coconut Cookies", price: 30, description: "Traditional coconut flavored treats" },
-    { name: "Salted Tea Cookies", price: 30, description: "Perfect with your evening tea" },
-    { name: "Banana Cake", price: 60, description: "Moist banana flavored cake slice" },
-    { name: "Chocolate Brownies", price: 80, description: "Fudgy and rich chocolate brownies" },
-    { name: "Red Velvet Cream Cheese Brownies", price: 80, isPopular: true, description: "Premium brownies with cream cheese" }
+    { name: "Chocolate Truffle Cake", price: 800, isPopular: true, description: "Decadent chocolate layers with premium truffle and rich ganache" },
+    { name: "Red Velvet Cupcake", price: 60, description: "Velvety smooth cupcake with cream cheese frosting" },
+    { name: "Vanilla Cupcake", price: 50, description: "Classic vanilla cupcake with creamy buttercream frosting" },
+    { name: "Double Chocolate Muffin", price: 40, description: "Moist muffin loaded with chocolate chips and cocoa" },
+    { name: "Black Forest Cake", price: 600, isPopular: true, description: "Cherry and chocolate classic with whipped cream" },
+    { name: "Strawberry Cake", price: 700, description: "Fresh strawberry celebration cake with berry compote" },
+    { name: "Mawa Cake", price: 600, description: "Traditional Indian milk cake with cardamom essence" },
+    { name: "Butterscotch Cake", price: 600, description: "Butterscotch flavored sponge with caramel drizzle" },
+    { name: "Choco Chip Cookies", price: 60, description: "Crispy cookies loaded with chocolate chips" },
+    { name: "Chocolate Brownies", price: 80, description: "Fudgy and rich chocolate brownies with nuts" }
   ];
 
   const sugarlessItems = [
-    { name: "Sugarless Chocolate Cake", price: 550, isPopular: true, description: "Rich chocolate without the guilt" },
-    { name: "Sugarless Vanilla Cake", price: 500, description: "Light vanilla with natural sweeteners" },
-    { name: "Sugarless Carrot Cake", price: 600, description: "Healthy carrot cake with nuts" },
-    { name: "Sugarless Banana Bread", price: 450, description: "Naturally sweet banana bread" },
-    { name: "Sugarless Oat Cookies", price: 40, description: "Wholesome oat cookies" },
-    { name: "Sugarless Date Brownies", price: 90, description: "Date-sweetened fudgy brownies" },
-    { name: "Sugarless Coconut Ladoo", price: 35, description: "Traditional sweet with jaggery" },
-    { name: "Sugarless Fruit Cake", price: 650, description: "Mixed fruit cake with honey" }
+    { name: "Sugarless Chocolate Cake", price: 550, isPopular: true, description: "Rich chocolate cake sweetened with natural dates and honey" },
+    { name: "Sugarless Vanilla Cake", price: 500, description: "Light vanilla sponge with stevia and natural sweeteners" },
+    { name: "Sugarless Carrot Cake", price: 600, description: "Healthy carrot cake with walnuts and cream cheese frosting" },
+    { name: "Sugarless Banana Bread", price: 450, description: "Naturally sweet banana bread with whole wheat flour" },
+    { name: "Sugarless Oat Cookies", price: 40, description: "Wholesome oat cookies with raisins and nuts" },
+    { name: "Sugarless Date Brownies", price: 90, isPopular: true, description: "Date-sweetened fudgy brownies with dark chocolate" },
+    { name: "Sugarless Coconut Ladoo", price: 35, description: "Traditional coconut sweet balls with jaggery" },
+    { name: "Sugarless Fruit Cake", price: 650, description: "Mixed dry fruit cake sweetened with honey" }
   ];
 
   const kidsItems = [
-    { name: "Mini Cupcakes (Pack of 6)", price: 180, isPopular: true, description: "Colorful mini cupcakes perfect for kids" },
-    { name: "Animal Shaped Cookies", price: 45, description: "Fun animal-shaped cookies" },
-    { name: "Chocolate Milk Cake", price: 400, description: "Mild chocolate cake for kids" },
-    { name: "Rainbow Cake Slice", price: 80, description: "Colorful layered cake slice" },
-    { name: "Vanilla Ice Cream Cake", price: 500, description: "Cake with vanilla ice cream" },
-    { name: "Strawberry Milk Shake Cake", price: 450, description: "Milkshake flavored sponge" },
-    { name: "Cartoon Character Cookies", price: 60, description: "Decorated character cookies" },
-    { name: "Mini Donuts (Pack of 4)", price: 120, description: "Bite-sized glazed donuts" },
-    { name: "Fruit Tart for Kids", price: 70, description: "Fresh fruit mini tarts" },
-    { name: "Birthday Special Cupcake", price: 100, description: "Decorated birthday cupcake" }
+    { name: "Mini Cupcakes (Pack of 6)", price: 180, isPopular: true, description: "Colorful mini cupcakes with fun sprinkles and designs" },
+    { name: "Animal Shaped Cookies", price: 45, description: "Fun animal-shaped cookies with colorful icing" },
+    { name: "Rainbow Cake Slice", price: 80, description: "Vibrant multi-layered rainbow cake slice" },
+    { name: "Chocolate Milk Cake", price: 400, description: "Mild chocolate cake perfect for young taste buds" },
+    { name: "Cartoon Character Cookies", price: 60, description: "Decorated cookies featuring popular cartoon characters" },
+    { name: "Mini Donuts (Pack of 4)", price: 120, isPopular: true, description: "Bite-sized glazed donuts with colorful toppings" },
+    { name: "Strawberry Milk Shake Cake", price: 450, description: "Milkshake flavored sponge with strawberry cream" },
+    { name: "Birthday Special Cupcake", price: 100, description: "Specially decorated birthday cupcake with candle" }
   ];
 
   return (
@@ -62,34 +50,34 @@ const Index = () => {
       <Header />
       <Hero />
       
-      <div id="desserts">
-        <MenuSection 
-          title="Desserts"
-          icon={<Cake className="w-8 h-8 text-primary" />}
-          items={dessertItems}
-          bgColor="bg-white"
-        />
-      </div>
+      <CategorySection 
+        id="desserts"
+        title="Desserts"
+        subtitle="Indulge in our signature collection of handcrafted desserts, made with premium ingredients and traditional techniques"
+        icon={<Cake className="w-10 h-10 text-primary" />}
+        items={dessertItems}
+        bgColor="bg-white"
+      />
 
       <FeaturedSection />
 
-      <div id="sugarless">
-        <MenuSection 
-          title="Sugarless Desert"
-          icon={<Heart className="w-8 h-8 text-primary" />}
-          items={sugarlessItems}
-          bgColor="bg-gradient-soft"
-        />
-      </div>
+      <CategorySection 
+        id="sugarless"
+        title="Sugarless Delights"
+        subtitle="Guilt-free sweetness with our healthy dessert range, naturally sweetened and perfectly delicious"
+        icon={<Heart className="w-10 h-10 text-primary" />}
+        items={sugarlessItems}
+        bgColor="bg-gradient-to-br from-purple-50/50 to-white"
+      />
 
-      <div id="kids">
-        <MenuSection 
-          title="Kids Edition"
-          icon={<Sparkles className="w-8 h-8 text-primary" />}
-          items={kidsItems}
-          bgColor="bg-white"
-        />
-      </div>
+      <CategorySection 
+        id="kids"
+        title="Kids Edition"
+        subtitle="Magical treats designed especially for little ones, with fun shapes, colors, and kid-friendly flavors"
+        icon={<Sparkles className="w-10 h-10 text-primary" />}
+        items={kidsItems}
+        bgColor="bg-white"
+      />
 
       <GallerySection />
       
